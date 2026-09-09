@@ -30,7 +30,7 @@ export default async function handler(request, response) {
       return response.status(502).json({ error: 'instagram_unavailable' });
     }
 
-    const posts = (payload.data || []).map((post) => ({
+    const posts = (payload.data || []).filter((post) => post.media_type === 'VIDEO').map((post) => ({
       id: post.id,
       caption: (post.caption || '').slice(0, 180),
       mediaType: post.media_type,
