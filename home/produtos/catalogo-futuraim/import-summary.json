@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-09-21T15:14:01.6161596Z",
+  "source": "Z:\\ZAP ZAP\\futuraim_site_completo\\produtos",
+  "destination": "C:\\Users\\usuario\\Documents\\Codex\\2026-08-26\\referenced-chatgpt-conversation-this-is-an\\github-assets\\home\\produtos\\catalogo-futuraim",
+  "imported": 597,
+  "skipped": 0,
+  "categories": [
+    {
+      "name": "adesivos-e-rotulos",
+      "count": 52
+    },
+    {
+      "name": "banners-e-sinalizacao",
+      "count": 60
+    },
+    {
+      "name": "calendarios-e-agendas",
+      "count": 30
+    },
+    {
+      "name": "cartoes-e-papelaria",
+      "count": 129
+    },
+    {
+      "name": "diversos",
+      "count": 96
+    },
+    {
+      "name": "embalagens",
+      "count": 68
+    },
+    {
+      "name": "festas-e-eventos",
+      "count": 6
+    },
+    {
+      "name": "folders-e-folhetos",
+      "count": 10
+    },
+    {
+      "name": "personalizados-e-brindes",
+      "count": 75
+    },
+    {
+      "name": "vestuario",
+      "count": 71
+    }
+  ],
+  "skipped_files": []
+}
