@@ -1,0 +1,90 @@
+/* Organização complementar da página /pagina/todos-os-produtos.
+   Mantida fora do editor visual porque a plataforma remove blocos <style>. */
+body:has(#cp-catalog) #cp-catalog > h2 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 42px 20px 22px;
+  color: #082e63;
+  font-size: 30px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+body:has(#cp-catalog) #cp-catalog > #cpg {
+  width: min(1240px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 0 0 48px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+body:has(#cp-catalog) #cp-catalog .cpc {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dce9f7;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(8, 58, 112, .10);
+  color: #10243e;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+body:has(#cp-catalog) #cp-catalog .cpc:hover {
+  transform: translateY(-5px);
+  border-color: #8fc2f6;
+  box-shadow: 0 16px 34px rgba(8, 58, 112, .18);
+}
+
+body:has(#cp-catalog) #cp-catalog .cpc img {
+  width: 100%;
+  height: 205px;
+  display: block;
+  object-fit: cover;
+  background: #f3f7fb;
+}
+
+body:has(#cp-catalog) #cp-catalog .cpc > div {
+  min-height: 88px;
+  padding: 16px 17px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+body:has(#cp-catalog) #cp-catalog .cpc h3 {
+  margin: 0;
+  color: #082e63;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+body:has(#cp-catalog) #cp-catalog .cpc span {
+  color: #0867d9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+
+body:has(#cp-catalog) #cp-catalog > .cpa {
+  width: min(1240px, calc(100% - 40px));
+  margin: 0 auto 54px;
+}
+
+@media (max-width: 920px) {
+  body:has(#cp-catalog) #cp-catalog > #cpg { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 540px) {
+  body:has(#cp-catalog) #cp-catalog > h2 { padding-top: 30px; font-size: 25px; }
+  body:has(#cp-catalog) #cp-catalog > #cpg { width: min(100% - 24px, 1240px); gap: 12px; }
+  body:has(#cp-catalog) #cp-catalog .cpc img { height: 135px; }
+  body:has(#cp-catalog) #cp-catalog .cpc > div { min-height: 92px; padding: 12px; }
+  body:has(#cp-catalog) #cp-catalog .cpc h3 { font-size: 15px; }
+  body:has(#cp-catalog) #cp-catalog > .cpa { width: calc(100% - 24px); margin-bottom: 36px; }
+}
