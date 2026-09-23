@@ -41,6 +41,29 @@ var q=Header.querySelector('#cp5-q'),res=Header.querySelector('#cp5-results');fu
 [].slice.call(document.querySelectorAll('.flex-control-nav,.flex-direction-nav,.carousel-indicators,.carousel-control,.bx-controls,.owl-controls,.owl-nav,.owl-dots,.slick-arrow,.slick-dots,.swiper-button-prev,.swiper-button-next,.swiper-pagination')).forEach(function(e){if(!H.contains(e))e.classList.add('cp5-hide-old')});
 })();
 </script>
+<script>
+(function(){
+if(location.pathname!=='/'&&location.pathname!=='')return;
+function corrigirAdesivos(){
+var destino='https://www.copyeprint.com.br/categoria/promocao';
+var imagem='https://www.copyeprint.com.br/uploads/produtos/mini/adesivo-de-vinil-6x6cm-6x6cm-tinta-eco-solvente-corte-reto-frente2011-16165938121233907129605b4394353cf.jpg';
+document.querySelectorAll('.cp5-header-nav a').forEach(function(link){
+if((link.getAttribute('href')||'').indexOf('/categoria/encadernacao')>-1){link.href=destino;link.textContent='Adesivos'}
+});
+document.querySelectorAll('.cp5-services .cp5-service').forEach(function(card){
+if((card.getAttribute('href')||'').indexOf('/categoria/encadernacao')>-1){
+card.href=destino;
+var foto=card.querySelector('img'),titulo=card.querySelector('strong'),apoio=card.querySelector('small');
+if(foto){foto.src=imagem;foto.alt='Adesivos'}
+if(titulo)titulo.textContent='Adesivos';
+if(apoio)apoio.textContent='Ofertas e promoções';
+}
+});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',corrigirAdesivos);else corrigirAdesivos();
+setTimeout(corrigirAdesivos,300);setTimeout(corrigirAdesivos,1000);
+})();
+</script>
 
 <!-- Copy & Print — Escolha fácil: categoria Impressões -->
 <style>
